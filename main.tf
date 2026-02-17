@@ -54,10 +54,3 @@ provider "helm" {
   }
 }
 
-output "release_name" {
-  value = helm_release.consul.name
-}
-
-output "namespace" {
-  value = helm_release.consul.namespace
-}
