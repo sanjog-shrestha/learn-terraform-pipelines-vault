@@ -53,3 +53,11 @@ provider "helm" {
     cluster_ca_certificate = data.tfe_outputs.cluster.values.cluster_ca_certificate
   }
 }
+
+output "release_name" {
+  value = helm_release.consul.name
+}
+
+output "namespace" {
+  value = helm_release.consul.namespace
+}
